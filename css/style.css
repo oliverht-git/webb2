@@ -13,3 +13,9 @@ nav {
     margin: 0;
     
 }
+
+nav h1 {
+    color: black;
+    text-align: center;
+}
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Betygskriterier</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="../css/style2.css">
 </head>
 
 <body>
@@ -20,6 +20,141 @@
         </ul>
     </nav>
 
-    <script src="script.js"></script>
+    <main class="betyg-container">
+        <h1>Betygskriterier</h1>
+
+        <table class="betyg-tabell">
+            <thead>
+                <tr>
+                    <th>Betyg</th>
+                    <th>Kunskapskrav</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="betyg">E</td>
+                    <td>
+                        <details>
+                            <summary>Visa kriterier för E</summary>
+                            <p>
+                                Eleven beskriver översiktligt webben som körmiljö och gör
+                                en enkel jämförelse med något annat alternativ.
+                            </p>
+                            <p>
+                                Eleven gör en enkel projektplan och utvecklar produkten
+                                i samråd med handledare. Eleven använder några tekniker
+                                för märkspråk och stilmallar.
+                            </p>
+                            <p>
+                                Produkten har tillfredsställande funktion och kvalitet.
+                                Eleven genomför några enkla tester och dokumenterar
+                                samt utvärderar sitt arbete.
+                            </p>
+                            <p>
+                                Eleven redogör översiktligt för lagar, säkerhet,
+                                etik och terminologi inom webbutveckling.
+                            </p>
+                        </details>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="betyg">D</td>
+                    <td>
+                        <details>
+                            <summary>Visa kriterier för D</summary>
+                            <p>
+                                Betyget D innebär att kunskapskraven för E och till
+                                övervägande del för C är uppfyllda.
+                            </p>
+                        </details>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="betyg">C</td>
+                    <td>
+                        <details>
+                            <summary>Visa kriterier för C</summary>
+                            <p>
+                                Eleven beskriver utförligt webben som körmiljö och gör
+                                en välgrundad jämförelse med några andra alternativ.
+                            </p>
+                            <p>
+                                Eleven gör en genomarbetad projektplan och utvecklar
+                                produkten efter samråd med handledare. Logik för
+                                innehåll, design och beteende är åtskild.
+                            </p>
+                            <p>
+                                Produkten har tillfredsställande kvalitet. Eleven
+                                genomför tester, kontrollerar tillgänglighet och
+                                dokumenterar arbetet noggrant.
+                            </p>
+                            <p>
+                                Eleven för välgrundade resonemang om etik, integritet
+                                och säkerhet.
+                            </p>
+                        </details>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="betyg">B</td>
+                    <td>
+                        <details>
+                            <summary>Visa kriterier för B</summary>
+                            <p>
+                                Betyget B innebär att kunskapskraven för C och till
+                                övervägande del för A är uppfyllda.
+                            </p>
+                        </details>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="betyg">A</td>
+                    <td>
+                        <details>
+                            <summary>Visa kriterier för A</summary>
+                            <p>
+                                Eleven beskriver utförligt och nyanserat webben som
+                                körmiljö och gör en välgrundad och nyanserad jämförelse
+                                med flera andra alternativ.
+                            </p>
+                            <p>
+                                Eleven gör en genomarbetad projektplan och reviderar
+                                den vid behov. Kod, innehåll, design och beteende är
+                                åtskilda i omfattande utsträckning.
+                            </p>
+                            <p>
+                                Produkten har god kvalitet och följer etablerad god
+                                praxis. Eleven använder flera tester, manuell testning
+                                och automatiserade tester.
+                            </p>
+                            <p>
+                                Eleven dokumenterar utförligt, utvärderar nyanserat och
+                                ger förslag på hur arbetet kan förbättras.
+                            </p>
+                            <p>
+                                Eleven resonerar utförligt och nyanserat om lagar,
+                                etik, integritet och säkerhet.
+                            </p>
+                        </details>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Stäng">&times;</button>
+            <h2 id="modal-title"></h2>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <script src="../javascript/script.js"></script>
 </body>
 </html>

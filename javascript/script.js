@@ -4,11 +4,14 @@ const modalText = document.querySelector("#modal-text");
 const closeButton = document.querySelector(".close-modal");
 
 document.querySelectorAll(".betyg-tabell tr").forEach((row) => {
-    row.addEventListener("click", () => {
-        const details = row.querySelector("details");
-        const summary = details.querySelector("summary");
+    const details = row.querySelector("details");
 
-        modalTitle.textContent = summary.textContent;
+    if (!details) return;
+
+    row.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        modalTitle.textContent = details.querySelector("summary").textContent;
         modalText.innerHTML = "";
 
         details.querySelectorAll("p").forEach((paragraph) => {

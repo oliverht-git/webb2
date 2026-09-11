@@ -191,7 +191,7 @@ nav h1{
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    min-height: 300px;
+    min-height: 150px;
     padding: 20px;
     border: 2px solid #777;
     border-radius: 12px;
@@ -231,6 +231,15 @@ nav h1{
 
 .betyg-tabell details p {
     line-height: 1.6;
+}
+
+.betyg-tabell details summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.betyg-tabell details summary::-webkit-details-marker {
+    display: none;
 }
 
 @media (max-width: 900px) {
@@ -295,8 +304,4 @@ nav h1{
 
 .close-modal:hover {
     color: #60a5fa;
-}
-
-.betyg-tabell details summary {
-    cursor: pointer;
 }

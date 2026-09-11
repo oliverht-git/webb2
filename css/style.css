@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding-top: 80px;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family: 'new times roman';
     background: #111827;
     color: white;
 }
@@ -33,6 +33,7 @@ nav li a {
     color: white;
     font-size: 16px;
     text-decoration: none;
+    font-family: 'new times roman';
 }
 
 nav li a:hover {
@@ -43,6 +44,7 @@ nav h1 {
     margin: 0 0 10px;
     color: white;
     text-align: center;
+    font-family: 'new times roman';
 }
 
 .navbar {
@@ -73,6 +75,7 @@ nav h1 {
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
+    font-family: 'new times roman';
 }
 
 .nav-links {
@@ -116,4 +119,17 @@ nav h1 {
 
 body h1{
     text-align: center;
+    font-family: 'new times roman';
+}
+
+.text-container {
+    max-width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px #0008;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'new times roman';
 }

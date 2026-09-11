@@ -122,6 +122,143 @@ body h1{
     font-family: 'new times roman';
 }
 
+.timeline-section {
+    max-width: 950px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 40px;
+    padding-left: 20px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 110px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #60a5fa, #f59e0b, #60a5fa);
+    border-radius: 999px;
+}
+
+.timeline-item {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    border: none;
+    background: transparent;
+}
+
+.timeline-item summary {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 30px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.timeline-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.timeline-marker {
+    position: relative;
+    z-index: 1;
+    width: 120px;
+    padding: 12px 16px;
+    background: #60a5fa;
+    color: #0f172a;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 999px;
+    box-shadow: 0 0 18px rgba(96, 165, 250, 0.4);
+}
+
+.timeline-marker::after {
+    content: "";
+    position: absolute;
+    right: -28px;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #60a5fa;
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.15);
+}
+
+.timeline-content {
+    background: #1f2937;
+    border-left: 5px solid #60a5fa;
+    border-radius: 12px;
+    padding: 20px 22px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #f8fafc;
+    font-size: 1.4rem;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #d1d5db;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.timeline-extra {
+    margin-left: 180px;
+    margin-top: 12px;
+    background: #111827;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    padding: 16px 18px;
+    color: #d1d5db;
+    line-height: 1.7;
+}
+
+.timeline-extra p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 700px) {
+    .timeline::before {
+        left: 24px;
+    }
+
+    .timeline-item summary {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .timeline-marker {
+        width: 90px;
+        margin-left: 12px;
+    }
+
+    .timeline-marker::after {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%) translateY(0);
+        top: calc(100% + 10px);
+    }
+
+    .timeline-extra {
+        margin-left: 0;
+    }
+}
+
+
 .text-container {
     max-width: 75%;
     margin: 20px auto;

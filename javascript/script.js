@@ -3,6 +3,18 @@ const modalTitle = document.querySelector("#modal-title");
 const modalText = document.querySelector("#modal-text");
 const closeButton = document.querySelector(".close-modal");
 
+document.querySelectorAll(".timeline-item").forEach((item) => {
+    item.addEventListener("toggle", () => {
+        if (!item.open) return;
+
+        document.querySelectorAll(".timeline-item").forEach((otherItem) => {
+            if (otherItem !== item) {
+                otherItem.open = false;
+            }
+        });
+    });
+});
+
 document.querySelectorAll(".betyg-tabell tr").forEach((row) => {
     const details = row.querySelector("details");
 
@@ -10,6 +22,8 @@ document.querySelectorAll(".betyg-tabell tr").forEach((row) => {
 
     row.addEventListener("click", (event) => {
         event.preventDefault();
+
+        if (!modal || !modalTitle || !modalText) return;
 
         modalTitle.textContent = details.querySelector("summary").textContent;
         modalText.innerHTML = "";
@@ -22,12 +36,16 @@ document.querySelectorAll(".betyg-tabell tr").forEach((row) => {
     });
 });
 
-closeButton.addEventListener("click", () => {
-    modal.classList.remove("show");
-});
-
-modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
+if (closeButton) {
+    closeButton.addEventListener("click", () => {
         modal.classList.remove("show");
-    }
-});
+    });
+}
+
+if (modal) {
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.classList.remove("show");
+        }
+    });
+}

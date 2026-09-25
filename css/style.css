@@ -276,3 +276,26 @@ nav h1 {
     font-size: 1.2rem;
     font-family: 'new times roman';
 }
+
+
+.text-container h1{
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'new times roman';
+}
+
+.text-container h3{
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: white;
+    font-family: 'new times roman';
+}
+
+
+.text-container p{
+    font-size: 1.1rem;
+    font-family: 'new times roman';
+    line-height: 1.6;
+    color: white;
+}

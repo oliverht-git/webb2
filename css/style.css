@@ -299,3 +299,107 @@ nav h1 {
     line-height: 1.6;
     color: white;
 }
+
+
+body.dark-mode {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+body.dark-mode .navbar,
+body.dark-mode nav {
+    background: #1f2937;
+    border-bottom-color: #374151;
+}
+
+body.dark-mode .nav-links a,
+body.dark-mode .logo,
+body.dark-mode .dark-mode-toggle {
+    background: #374151;
+    color: #f9fafb;
+    border-color: #6b7280;
+}
+
+body.dark-mode .nav-links a:hover,
+body.dark-mode .logo:hover {
+    background: #4b5563;
+}
+
+body.dark-mode .text-container,
+body.dark-mode .timeline-content,
+body.dark-mode .timeline-extra,
+body.dark-mode .modal-content {
+    background: #ffffff;
+    color: #111827;
+    border-color: #d1d5db;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+body.dark-mode .text-container h1,
+body.dark-mode .text-container h3,
+body.dark-mode .text-container p,
+body.dark-mode .timeline-content h2,
+body.dark-mode .timeline-content p,
+body.dark-mode .timeline-extra p,
+body.dark-mode .modal-content h2,
+body.dark-mode .modal-content p,
+body.dark-mode .close-modal {
+    color: #111827;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 110px;
+    right: 20px;
+    z-index: 1001;
+    padding: 10px 16px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 999px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    top: 3px;
+    border-radius: 50%;
+    background: white;
+    transition: 0.3s ease;
+}
+
+.switch input:checked + .slider {
+    background-color: #60a5fa;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(26px);
+}

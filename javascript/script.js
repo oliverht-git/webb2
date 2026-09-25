@@ -49,3 +49,22 @@ if (modal) {
         }
     });
 }
+
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+function applyDarkMode(isDark) {
+    document.body.classList.toggle("dark-mode", isDark);
+
+    if (darkModeToggle) {
+        darkModeToggle.checked = isDark;
+    }
+}
+
+function toggleDarkMode() {
+    const isDark = !document.body.classList.contains("dark-mode");
+    localStorage.setItem("darkMode", String(isDark));
+    applyDarkMode(isDark);
+}
+
+const savedDarkMode = localStorage.getItem("darkMode") === "true";
+applyDarkMode(savedDarkMode);

@@ -4,20 +4,26 @@
 
 body {
     margin: 0;
-    padding-top: 95px;
+    padding-top: 80px;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family: 'new times roman';
     background: #111827;
     color: white;
+}
+
+body h1{
+    text-align: center;
+    font-family: 'new times roman';
+    font-size: 2.5rem;
 }
 
 nav{
     background-color: #333;
     padding: 12px;
-    margin: 0;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 nav ul{
@@ -26,20 +32,26 @@ nav ul{
     padding: 0;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
-nav li{
-    margin: 0 10px;
-}
+
 
 nav li a{
     color: white;
     text-decoration: none;
     font-size: 16px;
+    font-family: 'new times roman';
 }
 
 nav h1{
     color: white;
     text-align: center;
+    font-family: 'new times roman';
+    font-size: 2.5rem;
+}
+
+nav li a:hover{
+    color: #60a5fa;
 }
 
 .navbar {
@@ -70,6 +82,12 @@ nav h1{
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
+    font-family: 'new times roman';
+}
+
+.logo:hover{
+    background: #555;
+    border-color: #60a5fa;
 }
 
 .nav-links {
@@ -97,9 +115,8 @@ nav h1{
 }
 
 @media (max-width: 800px) {
-    .navbar {
-        flex-direction: column;
-        gap: 12px;
+    body {
+        padding-top: 180px;
     }
 
     .nav-links {
@@ -107,8 +124,8 @@ nav h1{
         justify-content: center;
     }
 
-    body {
-        padding-top: 170px;
+    .nav-links a {
+        font-size: 0.9rem;
     }
 }
 

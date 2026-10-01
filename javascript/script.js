@@ -15,37 +15,28 @@ document.querySelectorAll(".timeline-item").forEach((item) => {
         });
     });
 
-    const imageArea = document.createElement("div");
-    imageArea.className = "timeline-image-area";
+    const extra = item.querySelector(".timeline-extra");
+    const textArea = document.createElement("div");
+    textArea.className = "timeline-text";
 
-    const image = document.createElement("img");
-    image.className = "timeline-image";
-    image.alt = "";
-    image.hidden = true;
+    while (extra.firstElementChild) {
+        textArea.appendChild(extra.firstElementChild);
+    }
 
-    const label = document.createElement("label");
-    label.className = "timeline-image-label";
-    label.textContent = "Lägg till bild";
+    extra.append(textArea);
 
-    const input = document.createElement("input");
-    input.type = "file";
-    input.accept = "image/*";
-    input.className = "timeline-image-input";
+    if (item.dataset.image) {
+        const imageArea = document.createElement("div");
+        imageArea.className = "timeline-image-area";
 
-    input.addEventListener("change", () => {
-        const selectedFile = input.files[0];
-
-        if (!selectedFile) return;
-
-        image.src = URL.createObjectURL(selectedFile);
+        const image = document.createElement("img");
+        image.className = "timeline-image";
+        image.src = item.dataset.image;
         image.alt = `Bild till ${item.querySelector("h2").textContent}`;
-        image.hidden = false;
-        label.textContent = "Byt bild";
-    });
 
-    label.appendChild(input);
-    imageArea.append(image, label);
-    item.querySelector(".timeline-extra").prepend(imageArea);
+        imageArea.append(image);
+        item.querySelector("summary").append(imageArea);
+    }
 });
 
 // Betyg: Öppnar modal med information när en rad klickas

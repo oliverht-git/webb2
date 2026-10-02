@@ -73,13 +73,10 @@ document.querySelectorAll(".loggbok-box tr").forEach((row) => {
         modalTitle.textContent = cells[1].textContent.trim();
         modalText.innerHTML = "";
 
-        const date = document.createElement("p");
-        date.textContent = `Datum: ${cells[0].textContent.trim()}`;
-
         const description = document.createElement("p");
         description.textContent = cells[2].textContent.trim();
 
-        modalText.append(date, description);
+        modalText.append(description);
         modal.classList.add("show");
     });
 

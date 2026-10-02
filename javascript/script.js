@@ -60,6 +60,42 @@ document.querySelectorAll(".betyg-tabell tr").forEach((row) => {
         modal.classList.add("show");
     });
 });
+
+// Loggbok: Öppnar samma textmodal som betygssidan när ett kort klickas
+document.querySelectorAll(".loggbok-box tr").forEach((row) => {
+    const cells = row.querySelectorAll("td");
+
+    if (cells.length < 3) return;
+
+    row.addEventListener("click", () => {
+        if (!modal || !modalTitle || !modalText) return;
+
+        modalTitle.textContent = cells[1].textContent.trim();
+        modalText.innerHTML = "";
+
+        const date = document.createElement("p");
+        date.textContent = `Datum: ${cells[0].textContent.trim()}`;
+
+        const description = document.createElement("p");
+        description.textContent = cells[2].textContent.trim();
+
+        modalText.append(date, description);
+        modal.classList.add("show");
+    });
+
+    const dateCell = row.querySelector(".datum");
+    dateCell.setAttribute("role", "button");
+    dateCell.setAttribute("tabindex", "0");
+    dateCell.setAttribute("aria-label", "Öppna loggboksanteckning");
+
+    dateCell.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            row.click();
+        }
+    });
+});
+
 // Model: Stänger modal när stängningsknappen klickas eller när man klickar utanför modal-innehållet
 if (closeButton) {
     closeButton.addEventListener("click", () => {
